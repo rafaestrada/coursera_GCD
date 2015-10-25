@@ -47,7 +47,9 @@ total_set$Activity[total_set$Activity==6] = tolower(activity_labels[activity_lab
 ##  Grouping in term os Subject Id and activity for mean.
 bySubAct <- group_by(total_set, Subject_ID, Activity)
 
-tidySummary <- summarise_each(bySubAct, funs(mean))
+tidy <- summarise_each(bySubAct, funs(mean))
 
 ##Exporting tidy
-write.table(tidySummary, file="./tidySummary.txt", row.name = FALSE)
+write.table(tidy, file="./tidy.txt", row.name = FALSE)
+
+tidy <- read.table('tidy.txt', header = TRUE)
