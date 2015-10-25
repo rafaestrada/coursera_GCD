@@ -1,4 +1,6 @@
  Coursera Assingment Getting and Cleanning Data
+ 
+ 
  For Reading tidy data set in R use tidy <- read.table('tidySummary.txt', header = TRUE) 
  
 
